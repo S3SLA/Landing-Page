@@ -201,39 +201,24 @@
   </footer> -->
 
   <script>
-    
-    /*function activarPantallaCompleta() {
-      const doc = document.documentElement;
-
-      if (doc.requestFullscreen) {
-        doc.requestFullscreen();
-      } else if (doc.webkitRequestFullscreen) {
-        doc.webkitRequestFullscreen();
-      } else if (doc.msRequestFullscreen) {
-        doc.msRequestFullscreen();
-      }
-    } */
-
-
-
     function changeImage(type) {
       const image = document.getElementById("visionImage");
       const description = document.getElementById('visionDescription');
       switch(type) {
         case 'miopia':
-          image.src = "IMG/miopia.PNG";
+          image.src = "IMG/miopia.png";
           description.textContent = "La miopía es un defecto visual en el que los objetos cercanos se ven claramente, pero los lejanos se ven borrosos, debido a que la imagen se forma delante de la retina.";
           break;
         case 'astigmatismo':
-          image.src = "IMG/astigmatismo.PNG";
+          image.src = "IMG/astigmatismo.png";
           description.textContent = "El astigmatismo es un defecto visual causado por una curvatura irregular de la córnea o el cristalino, lo que provoca visión borrosa o distorsionada tanto de cerca como de lejos.";
           break;
         case 'hipermetropia':
-          image.src = "IMG/hipermetropia.PNG";
+          image.src = "IMG/hipermetropia.png";
           description.textContent = "La hipermetropía es un defecto visual en el que los objetos lejanos se ven con claridad, pero los cercanos se ven borrosos, porque la imagen se forma detrás de la retina.";
           break;
         case 'faquico':
-          image.src = "IMG/faquico.PNG";
+          image.src = "IMG/faquico.png";
           description.textContent = "El lente fáquico es un implante intraocular que se coloca sin extraer el cristalino natural, utilizado para corregir defectos visuales como miopía o astigmatismo en personas que no son candidatas a cirugía láser.";
           break;
       }
