@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Herramienta de Simulación de Visión</title>
+  <style>
+    body {
+      max-width: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      max-width: 100%;
+      height: 70px;
+      background: linear-gradient(to right, white, #0099ff);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header img{
+      max-width: 100%;
+      height: 100%;
+    }
+
+    /*header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    */
+
+    .container {
+      max-width: 75%;
+      max-height: 45%;
+      margin: auto;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .benefits {
+      margin-bottom: 1rem;
+    }
+
+    .benefits h2 {
+      color: #004aad;
+      margin-bottom: 0.5rem;
+    }
+
+    .simulator {
+      background: white;
+      padding: 2rem;
+      border-radius: 2rem;
+      box-shadow: 0 0 7rem rgba(0, 0, 0, 0.1);
+    }
+
+    .simulator img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 2rem;
+    }
+
+    /*
+    .buttons {
+      margin-top: 1.5rem;
+    }
+
+    .buttons button {
+      background-color: #3575b4;
+      color: white;
+      border: none;
+      padding: 1.5rem 1.5rem;
+      margin: 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .buttons button:hover {
+      background-color: #0071e3;
+    }  */
+
+
+    .buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 100%;
+    }
+
+    .buttons button {
+    
+    flex: 1 1 15%;
+    background: linear-gradient(135deg,#0099ff, #8ACCE6 ); 
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    }
+
+    .buttons button:hover {
+    max-width: 100%;
+    background: linear-gradient(135deg, #2F80ED, blue);
+    transform: translateY(-3px);
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 768px) {
+  .buttons button {
+    background: linear-gradient(135deg,#0099ff, #8ACCE6 ); /* rojo-naranja por ejemplo */
+  }
+}
+
+    /*
+    .pantallacompleta {
+    flex: 1 1 200px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    }
+
+    .pantallacompleta:hover{
+        background-color: #0056b3;
+    }
+    */
+
+    /*footer {
+      text-align: center;
+      padding: 2rem;
+      background: #002f6c;
+      color: #fff;
+      margin-top: 3rem;
+    }*/
+
+  </style>
+</head>
+<body>
+
+<!-- 
+  <header>
+    <h1>Herramienta de Simulación de Visión</h1>
+    <p>Clínica Vidavas</p>
+  </header>
+
+  -->
+
+  <header>
+    <img src="IMG/logo.png" alt="Logo">
+  </header>
+
+  <div class="container">
+    <!--<section class="benefits">
+      <h2>¿Para qué sirve?</h2>
+      <p>Conoce cómo podría verse el mundo si tuvieras miopía, astigmatismo u otros problemas visuales comunes.</p>
+    </section> -->
+
+    <section class="simulator">
+      <!--<div class="pantallacompleta"><button onclick="activarPantallaCompleta()">[ ]</button></div> -->
+      <img id="visionImage" src="IMG/miopia.png" alt="Simulación de visión">
+
+      <div class="buttons">
+        <button onclick="changeImage('miopia')">Miopía</button>
+        <button onclick="changeImage('astigmatismo')">Astigmatismo</button>
+        <button onclick="changeImage('hipermetropia')">Hipermetropia</button>
+        <button onclick="changeImage('faquico')">Lente Fáquico</button>
+      </div>
+      <p id="visionDescription" style="margin-top: 1em; font-size: 1.1em;"></p>
+      
+    </section>
+    
+    <a href="https://wa.me/51912345678" target="_blank">
+      <button style="background-color: #25D366; color: white; border: none; padding: 0.8rem 1.5rem; font-size: 1rem; border-radius: 5px; cursor: pointer;">
+        Contactar por WhatsApp
+      </button>
+    </a>
+
+  </div>
+
+  <!-- <footer>
+    &copy; 2025 Clínica Vidavas. Todos los derechos reservados.
+  </footer> -->
+
+  <script>
+    
+    /*function activarPantallaCompleta() {
+      const doc = document.documentElement;
+
+      if (doc.requestFullscreen) {
+        doc.requestFullscreen();
+      } else if (doc.webkitRequestFullscreen) {
+        doc.webkitRequestFullscreen();
+      } else if (doc.msRequestFullscreen) {
+        doc.msRequestFullscreen();
+      }
+    } */
+
+
+
+    function changeImage(type) {
+      const image = document.getElementById("visionImage");
+      const description = document.getElementById('visionDescription');
+      switch(type) {
+        case 'miopia':
+          image.src = "IMG/miopia.PNG";
+          description.textContent = "La miopía es un defecto visual en el que los objetos cercanos se ven claramente, pero los lejanos se ven borrosos, debido a que la imagen se forma delante de la retina.";
+          break;
+        case 'astigmatismo':
+          image.src = "IMG/astigmatismo.PNG";
+          description.textContent = "El astigmatismo es un defecto visual causado por una curvatura irregular de la córnea o el cristalino, lo que provoca visión borrosa o distorsionada tanto de cerca como de lejos.";
+          break;
+        case 'hipermetropia':
+          image.src = "IMG/hipermetropia.PNG";
+          description.textContent = "La hipermetropía es un defecto visual en el que los objetos lejanos se ven con claridad, pero los cercanos se ven borrosos, porque la imagen se forma detrás de la retina.";
+          break;
+        case 'faquico':
+          image.src = "IMG/faquico.PNG";
+          description.textContent = "El lente fáquico es un implante intraocular que se coloca sin extraer el cristalino natural, utilizado para corregir defectos visuales como miopía o astigmatismo en personas que no son candidatas a cirugía láser.";
+          break;
+      }
+
+    }
+  </script>
+
+</body>
+</html>
