@@ -46,97 +46,114 @@
   </section>
 
   <div id="termsModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h1 style="font-size: 1.5rem"><strong>Términos del Simulador</strong></h1><br>
-      <p style="text-align: justify">Este simulador tiene fin informativo y educativo. No sustituye la evaluación médica ni representa una condición visual exacta para todos los pacientes.</p>
-      <p style="text-align: justify">Al continuar, reconoces que entiendes esta limitación y aceptas que las imágenes son solo referencias aproximadas.</p>
-      <button onclick="location.href='main.html'" style="text-align: center">Aceptar y Continuar</button>
-    </div>
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h1><strong>Términos del Simulador</strong></h1>
+    <p>Este simulador tiene fin informativo y educativo. No sustituye la evaluación médica ni representa una condición visual exacta para todos los pacientes.</p>
+    <p>Al continuar, reconoces que entiendes esta limitación y aceptas que las imágenes son solo referencias aproximadas.</p>
+    <button onclick="location.href='main.html'">Aceptar y Continuar</button>
   </div>
+</div>
 
-  <script>
-    function openModal() {
-      document.getElementById("termsModal").style.display = "block";
+<!-- JavaScript -->
+<script>
+  function openModal() {
+    document.getElementById("termsModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("termsModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("termsModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
     }
+  }
+</script>
 
-    function closeModal() {
-      document.getElementById("termsModal").style.display = "none";
-    }
+<!-- CSS Responsivo -->
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
-    // Cierra el modal al hacer clic fuera del contenido
-    window.onclick = function(event) {
-      const modal = document.getElementById("termsModal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
+  .modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
 
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
+  .modal-content h1 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
 
+  .modal-content p {
+    text-align: justify;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .modal-content button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+
+  .close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+
+  @media (max-width: 480px) {
     .modal-content {
-      background-color: white;
-      margin: 10% auto;
-      padding: 2rem;
-      border-radius: 10px;
-      width: 80%;
-      max-width: 40%;
-      position: relative;
-      box-shadow: 0 0 15px white;
+      width: 90%;
+      padding: 1rem;
     }
 
-    .modal-content h2 {
-      margin-top: 0;
+    .modal-content h1 {
+      font-size: 1.2rem;
+    }
+
+    .modal-content p,
+    .modal-content button {
+      font-size: 0.95rem;
     }
 
     .close {
-      position: absolute;
-      top: 5%;
-      right: 5%;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: white;
-      cursor: pointer;
+      font-size: 1.2rem;
     }
-
-    .close:hover {
-      color: #333;
-    }
-
-    .modal-content button {
-      /*margin-top: 1.5rem;
-      align-items: center;
-      background-color: #28a745;*/
-
-      margin-left: 65%;
-      margin-top: 2rem;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .modal-content button:hover{
-      background-color: #0056b3;
-      align-items: center;
-    }
-  </style>
+  }
+</style>
 
 </body>
 </html>
